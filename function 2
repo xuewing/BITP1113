@@ -1,0 +1,26 @@
+// ConsoleApplication7.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+void star()
+{
+	cout << "This is lab 4" << endl;
+	cout << "Ding Xue Wing, Do exercise" << endl;
+
+}
+
+int main()
+{
+	star();
+	int x = 10;
+	int y = 45;
+	int z = x + y;
+	cout << "x=" << x << endl;
+	cout << "y=" << y << endl;
+	cout << "z=" << z << endl;
+
+	return 0;
+}
