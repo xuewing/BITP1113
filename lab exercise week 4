@@ -1,5 +1,4 @@
-// ConsoleApplication7.cpp : Defines the entry point for the console application.
-//
+// This is lab exercise 4.//
 
 #include "stdafx.h"
 #include <iostream>
