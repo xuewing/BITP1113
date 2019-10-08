@@ -1,0 +1,38 @@
+// Labweek5.cpp : using some library functions and more 
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+
+int main()
+{
+	int a=1, b=1, c=1, x=4, z=5 ;
+	double y = 0.0;
+
+	 y = x + 9 ;
+	cout <<setw(6)<< y << endl;   //setwidth
+
+	a = (2 * b) + (2 * c);
+	cout << a << endl;
+	cout << static_cast<double>(a) << endl << endl;
+
+	y = pow(x, 3);
+	cout <<showpoint<< setprecision(4)<< "y= pow(x,3) is " <<y <<endl;
+
+	 y = x / pow (z, 2) +2;
+	cout << y << endl;
+
+	y = pow(x, 2)/ pow(y, 2);
+	cout << y << endl;
+	cout << "no precision double of y: " << y << endl;
+	cout << fixed << setprecision(2)<< "fixed + prec double of y: " << y << endl;
+	cout << "int of y: " << static_cast<int>(y) << endl;
+
+
+	
+    return 0;
+}
