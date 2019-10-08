@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
+#include <string>
 using namespace std;
 
 
@@ -30,9 +31,14 @@ int main()
 	cout << y << endl;
 	cout << "no precision double of y: " << y << endl;
 	cout << fixed << setprecision(2)<< "fixed + prec double of y: " << y << endl;
-	cout << "int of y: " << static_cast<int>(y) << endl;
+	cout << "int of y: " << static_cast<int>(y) << endl; //changing data type during execution
 
-
+	//learning string class file
+	string name; //use a string data type
+	cout << "Please enter a name:";
+	//cin >> name;
+	getline(cin, name); //function in <string>
+	cout << "you key in " << name << endl;
 	
     return 0;
 }
