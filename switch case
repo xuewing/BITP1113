@@ -8,11 +8,11 @@ using namespace std;
 
 int main()
 {
-	int choice;
+	int choice, month;
 
 	do
 	{
-		cout << setw(30) << " This is a Gym Menu\n"; 
+		cout << setw(30) << " This is a Gym Menu\n";
 		cout << setw(30) << " Please enter your choice\n";
 		cout << setw(30) << "1.Adult Gym\n";
 		cout << setw(30) << "2.Kids Gym\n";
@@ -21,13 +21,19 @@ int main()
 		cout << setw(30) << " Please enter your choice for this menu";
 		cin >> choice;
 
+		cout << "Please enter your months:";
+		cin >> month;
+
 		switch (choice)
 		{
 		case 1: cout << " Adult Gym\nPrice is Rm 50\n";
+			cout << "Total fees RM " << month * 50;
 			break;
 		case 2: cout << " Kids Gym\nPrice is Rm 20\n";
+			cout << "Total fees RM " << month * 20;
 			break;
 		case 3: cout << " Senior Citizen Gym\nIs free\n";
+			cout << " Total fees is free";
 			break;
 		case 4: cout << "Exit the menu\n";
 
@@ -39,5 +45,5 @@ int main()
 
 	cout << "Thank you for using our gym service\n";
 
-    return 0;
+	return 0;
 }
