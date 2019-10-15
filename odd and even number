@@ -1,0 +1,27 @@
+// This program displays an integer of even or odd. It repeats as many times as the user wishes.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x;
+	char again;
+
+	do {
+		cout << "Please enter an integer";
+		cin >> x;
+
+		if (x % 2 == 0) 
+			cout << " This is an even number";
+		else 
+			cout << "This is an odd number";
+
+		cout << " Do you want to repeat with another integer";
+		cin >> again;
+
+	} while (again == 'Y' || again == 'y');
+    return 0;
+}
