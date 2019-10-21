@@ -1,0 +1,16 @@
+// This describe the development of function that are called from main.
+//
+
+#include <iostream>
+using namespace std;
+void changeMe(int);
+
+int main()
+{
+	changeMe(5 + 10);
+}
+
+void changeMe(int x)
+{
+	cout << x;
+}
