@@ -1,0 +1,50 @@
+// This program runs a geometry calculator.
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int choice;
+	float radius, length, width, base, height, area;
+	const double PI = 3.14159;
+
+		cout << " This is a geometry calculator." << endl;
+		cout << " 1. Calculate the Area of a Circle." << endl;
+		cout << " 2. Calculate the Area of a Rectangle." << endl;
+		cout << " 3. Calculate the Area of a Triangle." << endl;
+		cout << " 4. Quit. " << endl;
+		cout << " Please enter the choice for this menu: " << endl;
+		cin >> choice;
+
+		switch (choice)
+		{
+		case '1':
+			cout << "Please enter the radius of the circle:\t" << endl;
+			cin >> radius;
+			area = 2 * PI*radius*radius;
+			cout << " The area of the circle is " << area << endl;
+			break;
+		case '2':
+			cout << "Please enter the length and width of the rectangle:\t" << endl;
+			cin >> length >> width;
+			area = length * width;
+			cout << " The area of the rectangle is " << area << endl;
+			break;
+		case '3':
+			cout << " Please enter the length of triangle base and height:\t" << endl;
+			cin >> base >> height;
+			area = 1 / 2 * base*height;
+			cout << " The area of triangle is " << area << endl;
+			break;
+		case '4':
+			cout << " Quit the menu " << endl;
+			break;
+		default :
+			cout << " This is not a possible choice." << endl;
+		}
+
+	return 0;
+}
