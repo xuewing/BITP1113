@@ -1,0 +1,21 @@
+// This program calculates the average of a group test scores and the lowest score is dropped.
+
+#include 'stdafx.h'
+#include <iostream>
+using namespace std;
+void getScore(int&);
+void calcAverage(int, int, int, int);
+int findLowest(int, int, int, int, int);
+
+int main()
+{
+	int score1, score2, score3, score4, score5;
+
+	getScore(int score1);
+	getScore(int score2);
+	getScore(int score3);
+	getScore(int score4);
+	getScore(int score5);
+
+	calcu
+}
