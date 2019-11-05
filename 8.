@@ -17,5 +17,5 @@ int main()
 	getScore(int score4);
 	getScore(int score5);
 
-	calcu
+	calcAverage
 }
