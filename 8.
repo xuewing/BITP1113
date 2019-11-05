@@ -1,21 +1,73 @@
 // This program calculates the average of a group test scores and the lowest score is dropped.
 
-#include 'stdafx.h'
 #include <iostream>
 using namespace std;
-void getScore(int&);
-void calcAverage(int, int, int, int);
-int findLowest(int, int, int, int, int);
+void getScore(int&, int&, int&, int&, int&);
+void calcAverage(int&, int&, int&, int&, int&, int&, int&);
+int findLowest(int&, int&, int&, int&, int&);
 
 int main()
 {
-	int score1, score2, score3, score4, score5;
+	int score1, score2, score3, score4, score5, average;
+	int dropScore = findLowest(score1, score2, score3, score4, score5);
 
-	getScore(int score1);
-	getScore(int score2);
-	getScore(int score3);
-	getScore(int score4);
-	getScore(int score5);
 
-	calcAverage
+	getScore(score1);
+	getScore(score2);
+	getScore(score3);
+	getScore(score4);
+	getScore(score5);
+
+	calcAverage(score1, score2, score3, score4, score5, average, dropScore);
+	cout << " The average of all the score is:" << average << endl;
+
+	system("pause");
+	return 0;
+}
+
+void getScore(int&score1, int&score2, int&score3, int&score4, int&score5)
+{
+	int validScore;
+	cout << "Enter the score of the test:" << endl;
+	cin >> validScore;
+
+	while ((validScore < 0) || (validScore > 100))
+	{
+		cout << "Test score values can only be between 0 and 100." << endl;
+		cout << "Please enter the test score:";
+		cin >> validScore;
+	}
+	score = validScore;
+}
+void calcAverage(int &score1, int &score2, int &score3, int &score4, int &score5)
+{
+	int dropScore = findLowest(score1, score2, score3, score4, score5);
+	int sum = score1 + score2 + score3 + score4 + score5 - dropScore;
+	int average = sum / 5.0;
+
+	cout << "The average score of your test is:" << average << endl;
+
+}
+
+int findLowest(int score1, int score2, int score3, int score4, int score5)
+{
+	int lowestScore;
+	if (score1 <= score2)
+	{
+		lowestScore = score1;
+	else
+		lowestScore = score2;
+	}
+	if (score3 < lowestScore)
+	{
+		lowestScore = score3;
+	}
+	if (score4 < lowestScore)
+	{
+		lowestScore = score4;
+	}
+	if (score5 < lowestScore)
+	{
+		lowestScore = score5;
+	}
 }
