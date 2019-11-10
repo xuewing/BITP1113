@@ -1,0 +1,52 @@
+// This program uses while loops.
+
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	int firstNum, secondNum, oddNum, evenNum;
+	int SumEvenNum = 0, x = 1, SumSquareOddNum = 0;
+
+	do
+	{
+		cout << " First number must be less than second number.";
+		cout << " Please enter the first number:" << endl;
+		cin >> firstNum;
+		cout << " Please enter the second number:" << endl;
+		cin >> secondNum;
+		oddNum = firstNum;
+		evenNum = secondNum;
+	} while (firstNum >= secondNum);
+
+	cout << " The odd number between " << firstNum << "and" << secondNum << ":" << endl;
+	while (++oddNum < secondNum)
+	{
+		if (oddNum % 2 == 1 || oddNum % 2 = -1)
+			cout << "oddNum" << endl;
+	}
+
+	while (++evenNum < secondNum)
+	{
+		if (evenNum % 2 == 0)
+			SumEvenNum += evenNum;
+	}
+
+	cout << " The sum of the even number between" << firstNum << " and " << evenNum << " is" << endl;
+
+	while (++x < 10)
+	{
+		cout << "The square of " << x << " is" << x * x << endl;
+	}
+
+	oddNum = firstNum;
+
+	while (++oddNum < secondNum)
+	{
+		if (oddNum % 2 == 1 || oddNum % 2 == -1)
+			SumSquareOddNum += oddNum * oddNum;
+	}
+	cout << "The sum of the square of odd number between " << firstNum << " and " << secondNum << "is" << SumSquareOddNum;
+
+	system("pause");
+}
