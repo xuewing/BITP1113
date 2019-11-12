@@ -19,10 +19,12 @@ void main()
 			highest = scores[i];
 	cout << "The highest score is " << highest << endl;
 
+	
+	cout << " The scores and their differences from the highest are:" << endl;
 	for (i = 0; i < 5; i++)
 	{
 		differences = highest - scores[i];
 
-		cout << " The scores and their differences from the highest are:" << scores[i] << " off by " << differences << endl;
+		cout << scores[i] << " off by " << differences << endl;
 	}
 }
