@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include <iostream>
+
+
+using namespace std;
+
+void main()
+{
+	int even[10];
+
+	cout << "Please enter 10 even numbers:" << endl;
+
+	for (int i = 0; i < 10; i++)
+		cin >> even[i];
+
+	cout << "\n The second element is: " << even[1] << endl;
+	cout << "\n The fourth element is: " << even[3] << endl;
+
+	even[4] = even[1] * even[3];
+
+	cout << "\n The fifth element now is :" << even[4] << endl;
+	cout << " The numbers in array even now are : ";
+
+	for (int i = 0; i < 10; i++)
+		cout << even[i] << " ";
+	cout << endl;
+}
