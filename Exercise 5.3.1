@@ -1,0 +1,33 @@
+// This program prints number of odd and even integers and number of zeros
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x;
+	int odd = 0, even = 0, zero = 0;
+
+	cout << "Please enter 20 integers, positive, negative, or zeros." << endl;
+
+	for (int num = 1; num <= 20; num++)
+	{
+		cin >> x;
+
+		if (x % 2 == 0)
+		{
+			++even;
+			if (x == 0)
+				++zero;
+		}
+		else
+			++odd;
+
+		if (num == 1)
+			cout << "The numbers you entered are:" << endl;
+			cout << x << " ";
+	}
+
+	cout << " There are " << even << "evens, " << " which includes " << zero << "zeros." << endl;
+	cout << " The number of odd numbers is " << odd << endl;
+}
