@@ -1,0 +1,37 @@
+// This program calculates the occupancy rate for a hotel
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int totalFloor, numberOfRoom, occupiedRoom;
+	float occupiedPercentage, totalUnoccupiedRoom{}, totalRoom = 0, totalOccupiedRoom = 0;
+
+	cout << " Please enter number of floors the hotel has: " << endl;
+	cin >> totalFloor;
+	for (int i = 1; i <= totalFloor; i++)
+	{
+
+		do
+		{
+			cout << " Please enter the number of rooms on the floor: " << endl;
+			cin >> numberOfRoom;
+			cout << " Please enter the number of occupied rooms: " << endl;
+			cin >> occupiedRoom;
+		} while (numberOfRoom < occupiedRoom);
+
+		totalRoom += numberOfRoom;
+		totalOccupiedRoom += occupiedRoom;
+
+	};
+
+	totalUnoccupiedRoom += totalRoom - totalOccupiedRoom;
+	occupiedPercentage = (totalOccupiedRoom / totalRoom) * 100;
+
+	cout << " The total room the hotel has " << totalRoom << endl;
+	cout << " The number of occupied room are " << totalOccupiedRoom << endl;
+	cout << " The number of unoccupied room are " << totalUnoccupiedRoom << endl;
+	cout << " The percentage of rooms that are occupied are " << occupiedPercentage << endl;
+
+}
