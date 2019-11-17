@@ -1,0 +1,19 @@
+// This program calculate the distance using library function
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+void distance(int, int, int, int);
+
+int main()
+{
+	int x1, x2, y1, y2, d;
+	distance(x1, x2, y1, y2);
+	cout << " The distance is: " << d << endl;
+}
+
+void distance(int x1, int x2, int y1, int y2)
+{
+	int d;
+	d= sqrt(pow (x2 - x1) + (pow (y2 - y1)));
+}
