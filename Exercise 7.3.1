@@ -1,0 +1,22 @@
+// This program calculate the multiplication and division of two numbers
+
+#include <iostream>
+using namespace std;
+
+void calMulAndDiv(int, int, int&, int&);
+
+int main()
+{
+	int num1{}, num2{}, mul, div;
+
+	calMulAndDiv( num1, num2, mul, div );
+}
+
+void calMulAndDiv(int num1, int num2, int& mul, int& div)
+{
+	cout << " Input 2 integer numbers: " << endl;
+	cin >> num1 >> num2;
+
+	cout << num1 << " multiplied by " << num2 << " is " << num1 * num2 << endl;
+	cout << num1 << " divided by " << num2 << " is " << num1 / num2 << endl;
+}
