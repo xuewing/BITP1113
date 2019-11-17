@@ -1,0 +1,38 @@
+// This program calculate the average acceleration
+
+#include <iostream>
+using namespace std;
+
+void getData(float&, float&, float&);
+void calculate(float, float&, float&, float&);
+void displayAverageAcceleration(float, float&, float&, float&);
+
+int main()
+{
+	float v0, v1, t, a{};
+	getData(v0, v1, t);
+	calculate(a, v0, v1, t);
+	displayAverageAcceleration(a, v0, v1, t);
+}
+
+void getData(float& v0, float& v1, float& t)
+{
+	cout << "Input the starting velocity (km/h): " << endl;
+	cin >> v0;
+
+	cout << "Input the ending velocity (km/h): " << endl;
+	cin >> v1;
+
+	cout << " Input the time span (s): " << endl;
+	cin >> t;
+}
+
+void calculate(float a, float& v0, float& v1, float& t)
+{
+	a = (v1 - v0) / t;
+}
+
+void displayAverageAcceleration(float a, float& v0, float& v1, float& t)
+{
+	cout << " The average acceleration needed to accelerate a car from " << v0 << " km/h to " << v1 << " km/h in " << t << " seconds is " << (v1 - v0) / t << endl;
+}
