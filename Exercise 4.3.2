@@ -1,0 +1,23 @@
+// This program asks for the number of units sold and computes the total cost of the purchase.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int numberOfUnits;
+
+	cout << "Please enter the number of units sold: " << endl;
+	cin >> numberOfUnits;
+
+	if (numberOfUnits >=10 && numberOfUnits <=19)
+		cout << "The total cost of the purchase is" << 20 * numberOfUnits * 0.20 << endl;
+	else if (numberOfUnits >= 20 && numberOfUnits <= 49)
+		cout << "The total cost of the purchase is " << 20 * numberOfUnits * 0.30 << endl;
+	else if (numberOfUnits >= 50 && numberOfUnits <= 99)
+		cout << "The total cost of the purchase if " << 20 * numberOfUnits * 0.40 << endl;
+	else if (numberOfUnits >= 100)
+		cout << "The total cost of the purchase if " << 20 * numberOfUnits * 0.50 << endl;
+	else
+		cout << "Not a possible quantity" << endl;
+}
