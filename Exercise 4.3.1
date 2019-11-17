@@ -1,0 +1,34 @@
+//This program calculate parking rate
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char type;
+	int duration;
+	
+	cout << "Please enter the types of vehicle:" << endl;
+	cin >> type;
+
+	cout << " Please enter the parking time duration (in hour) while parking in the parking lot: " << endl;
+	cin >> duration;
+
+	switch (type)
+	{
+	case 'C' :
+		cout << "The parking rate is" << (1.00 * 3) + (1.50 * (duration - 3)) << endl;
+		break;
+
+	case 'L' :
+		cout << " The parking rate is " << (1.50 * 3) + (2.50 * (duration - 3)) << endl;
+		break;
+
+	case 'B' :
+		cout << " The parking rate is " << (2.00 * 3) + (3.50 * (duration - 3)) << endl;
+		break;
+	
+	default : 
+		cout << "Invalid type " << endl;
+	}
+}
