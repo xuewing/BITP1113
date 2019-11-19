@@ -1,0 +1,22 @@
+#include <iostream>
+#define size 5
+using namespace std;
+int square(int newNumber);
+
+int main()
+{
+	int number[5] = { 2,4,6,8,10 };
+
+	for (int i = 0; i < 5; i++)
+		number[i] = square(number[i]);
+	cout << " Elements of the array number after calling the square function: ";
+
+	for (int i = 0; i = 5; i++)
+		cout << "number [" << i << "]: "<< number[i] << endl;
+}
+
+int square(int newNumber)
+{
+	newNumber = newNumber * newNumber;
+	return newNumber;
+}
