@@ -1,0 +1,38 @@
+// This program include passing the whole array to a function
+
+#include "stdafx.h"
+#include <iostream>
+#define size 5
+using namespace std;
+
+void square(int number[]);
+void display(const int number[]);
+
+
+int main()
+{
+	int number[5] = { 2,4,6,8,10 };
+	square(number);
+
+	cout << "Elements of the array number after calling the square function :" << endl;
+
+	for (int i = 0; i < 5; i++)
+		cout << "number [" << i << "]: " << number[i] << endl;
+
+	cout << "\n Elements of the array number printed by the display function :\n";
+
+	display(number);
+	cout << "\n\n";
+}
+
+void square (int number [])
+{
+	for (int i = 0; i < 5; i++)
+		number[i] = number[i] * number[i];
+}
+
+void display(const int number[])
+{
+	for (int i = 0; i < 5; i++)
+		cout << "number[" << i << "]: " << number[i] << endl;
+}
