@@ -1,0 +1,44 @@
+// This program is to group the pupils based on their choice preference.
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char choice; 
+
+do {
+	cout << "There are five teachers for the trip to KidZania. " << endl;
+	cout << " A. Ali " << endl;
+	cout << " B. Bala " << endl;
+	cout << " C. Chan " << endl;
+	cout << " D. Dollah " << endl;
+	cout << " E. Ema " << endl;
+	cout << " Please choose within it. " << endl;
+
+	switch (choice)
+	{
+	case 'A':
+		cout << " Ali " << endl;
+		break;
+	case 'B':
+		cout << " Bala " << endl;
+		break;
+	case 'C':
+		cout << " Chan " << endl;
+		break;
+	case 'D':
+		cout << " Dollah " << endl;
+		break;
+	case 'E':
+		cout << " Ema " << endl;
+		break;
+	default:
+		cout << " This is an error " << endl;
+	}
+
+} while (choice != 'X');
+	cout << " Exit the program." << endl;
+
+}
