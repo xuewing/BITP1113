@@ -1,0 +1,28 @@
+#include <iostream>
+#define size 5
+using namespace std;
+
+double discount(int disc, double newPrice);
+
+void main()
+{
+	double price[size] = { 5.25,10.80,15.40,20.60,25.50 };
+	int discountValue;
+
+	cout << "\n\n Enter discount (%): ";
+	cin >> discountValue;
+
+	cout << " \n New price values after discount are : \n\n";
+	for (int i = 0; i < 5; i++)
+	{
+		price[i] = discount(discountValue, price[i]);
+		cout << " " << price[i];
+	}
+	cout << "\n\n";
+}
+
+double discount(int disc, double newPrice)
+{
+	newPrice = newPrice - (newPrice * disc / 100);
+	return (newPrice);
+}
