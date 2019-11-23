@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+	char s1[] = " What is your name ?";
+	int i, j;
+	i = strlen(s1);
+	for (j = 0; j < i; j++)
+	{
+		if (s1[j] != ' ')
+			cout << s1[j];
+		else
+			cout << endl;
+	}
+
+}
