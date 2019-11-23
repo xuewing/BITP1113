@@ -1,0 +1,28 @@
+#include <iostream>
+#define m = 3;
+#define n = 5;
+using namespace std;
+
+int main()
+{
+	int i, j;
+	double sum = 0, sumRow0 = 0, sumRow1 = 0, sumRow2 = 0;
+
+	int numbers[m][n] = { { 2,4,6,8,10},{1,3,5,7,9},{1,3,3,4,6} };
+
+	for (int i=0;i<m;i++)
+		for (int j = 0; j < n; j++)
+		{
+			sum+= numbers[i][j];
+				if (i==0)
+					sumRow0 += numbers [i][j];
+				else if (i==1)
+					sumRow0 += numbers[i][j];
+				else if (i == 2)
+					sumRow0 += numbers[i][j];
+		}
+	cout << " The sum of elements in the array numbers is: " << sum;
+	cout << " The sum of elements in the first row is: " << sumRow0;
+	cout << " The sum of elements in the second row is: " << sumRow1;
+	cout << " The sum of elements in the third row is: " << sumRow2;
+}
