@@ -1,0 +1,22 @@
+// This program requires store names, student id and course in a text file
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+	int name, studentId, course;
+
+	ofstream outFile("MYDATA.txt",ios::out);
+
+	if (!outFile)
+	{
+		cerr << "Error opening file\n";
+		exit(1);
+	}
+
+	cout << "Please enter name, student id and course: \n" << endl;
+	cin >> name >> studentId >> course;
+	outFile << name << " " << studentId << " " << course << " " << endl;
+}
