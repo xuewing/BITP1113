@@ -1,0 +1,26 @@
+// This program include reading from files
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+	ifstream inFile("list.txt");
+
+	if (!inFile)
+	{
+		cerr << "Error opening file " << endl;
+		exit(1);
+	}
+
+	string item;
+	int count = 0;
+
+	while (!inFile.eof())
+	{
+		inFile >> item;
+		count++;
+	}
+	cout << count << "items found!" << endl;
+}
