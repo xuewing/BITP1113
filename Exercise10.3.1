@@ -1,0 +1,55 @@
+//This program calculates the number of right answers and the marks scored by the student.
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+	int id;
+	char studAns[10];
+	char rightAns[10] = { 'A','C','D','A','A','B','B','D','C','D' };
+	float studMarks;
+
+	ifstream inputFile("studAnswers.txt");
+	ofstream outputFile("studResult.txt");
+
+	if (!inputFile)
+	{
+		cout << "File could not be opened\n";
+		exit(1);
+	}
+	if (!outputFile)
+	{
+		cout << "File could not be opened\n";
+		exit(1);
+	}
+
+	while (inputFile >> id >> studAns[0] >> studAns[1] >> studAns[2] >> studAns[3] >> studAns[4] >> studAns[5] >> studAns[6] >> studAns[7] >> studAns[8] >> studAns[9])
+	{
+		int count = 0;
+		outputFile << id << " ";
+		for (int i = 0; i < 10; i++)
+		{
+			if (studAns[i] == rightAns[i]);
+			count++;
+		}
+		studMarks = 0.05 * count;
+		outputFile << studMarks << "%" << endl;
+	}
+	cout << "Please refer to the file result\n";
+}
+
+
+
+studAnswers.txt
+S01 A C D C A B B C C D
+S02 A C D A A B A D C D
+S03 A C C A B B B C C D
+S04 A B D A B C B D C D
+S05 B C C A A B B D C B
+S06 A B D B A B C D C C
+S07 C B D B A C B D B D
+S08 A D D C A A B C C D
+S09 B C C A B B B D C D
+S10 B C D A A B B D C B
