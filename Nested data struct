@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+
+struct guardian {
+	char parent[20];
+	int numdep;
+};
+
+struct personal {
+	char name[20];
+	int age;
+	char status;
+	struct guardian dp;
+};
+
+int main()
+{
+	struct personal staff;
+
+	cout << " Enter name: ";
+	cin >> staff.name;
+	cout << " Enter age: ";
+	cin >> staff.age;
+	cout << " Enter your status: s-Single and m-married: ";
+	cin >> staff.status;
+
+	if (staff.status == 's')
+	{
+		cout << " Enter parent's name: ";
+		cin >> staff.dp.parent;
+	}
+	else
+	{
+		cout << " Enter number of dependant: ";
+		cin >> staff.dp.numdep;
+	}
+
+	cout << " Your name is " << staff.name << endl;
+	cout << "Your age is " << staff.age << endl;
+	cout << " Your parent's name is " << staff.dp.parent << endl;
+	cout << " Your number of dependant is ";
+	cout << staff.dp.numdep << endl;
+}
