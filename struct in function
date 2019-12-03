@@ -1,0 +1,34 @@
+#include<iostream>
+#include <iomanip>
+using namespace std;
+
+struct DATA
+{
+	char first;
+	int second;
+	float third;
+};
+
+void printData(DATA data);
+
+int main()
+{
+	struct DATA data;
+	data.first = 'A';
+	printData(data);
+
+	data.second = 100;
+	printData(data);
+
+	data.third = 100.0;
+	printData(data);
+}
+
+void printData(DATA data)
+{
+	cout << fixed << showpoint << setprecision(2);
+	cout << " Data as char: " << data.first << endl;
+	cout << " Data as int: " << data.second << endl;
+	cout << "Data as float: " << data.third << endl;
+	return;
+}
