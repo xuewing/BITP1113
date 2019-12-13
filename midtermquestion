@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void tajuk()
+{
+	cout << "Sila masukkan satu nombor: ";
+}
+
+int kuasaDua_nombor(int)
+{
+	return pow(10, 2);
+}
+
+void turutan_nombor()
+{
+	int ali;
+	int abu;
+	tajuk();
+	cin >> ali;
+	tajuk();
+	cin >> abu;
+	cout << "\nTurutan nombor adalah seperti di bawah: " << endl;
+	cout << ali << "\t" << abu << "\t" << ali + abu << "\t" << pow(ali+abu,2) << "\n";
+}
+
+int main()
+{
+	turutan_nombor();
+}
