@@ -1,0 +1,79 @@
+//cpp 8.3.3: Subjects marks for 30 students
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int subMarks[30][5];
+	int totMarks[30], lowestMarks[30], highestMarks[30];
+	float aveStuMarks[30], aveSubMarks[5];
+
+	for (int i = 0; i < 30; i++)
+	{
+		cout << "The 5 subjects marks for student " << i + 1 << ":" << endl;
+		for (int j = 0; j < 5; j++)
+		{
+			cin >> subMarks[i][j];
+		}
+	}
+
+	for (int i = 0; i < 30; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			totMarks[i] += subMarks[i][j];
+		}
+	}
+
+	for (int i = 0; i < 30; i++)
+	{
+		aveStuMarks[i] = double (totMarks[i]) / 5;
+	}
+
+	for (int j = 0; j<5; j++)
+	{
+		lowestMarks[j] = subMarks[0][j];
+		for (int i = 0; i < 30; i++)
+		{
+			if (subMarks[i][j] < lowestMarks[j])
+			{
+				lowestMarks[j] = subMarks[i][j];
+			}
+		}
+	}
+
+	for (int j = 0; j < 5; j++)
+	{
+		highestMarks[j] = subMarks[0][j];
+		for (int i = 0; i < 30; i++)
+		{
+			if (subMarks[i][j] > highestMarks[j])
+			{
+				highestMarks[j] = subMarks[i][j];
+			}
+		}
+	}
+
+	for (int j = 0; j < 5; j++)
+	{
+		for (int i=0;i<30;i++)
+		{
+			aveSubMarks[j] += subMarks[i][j];
+		}
+		aveSubMarks[j] /= 30;
+	}
+
+	cout << "Student\t\t" << "Total Marks\t\t" << "Average Marks\t\t" << endl;
+	for (int i = 0; i < 30; i++)
+	{
+		cout << i + 1 << "\t\t\t" << totMarks[i] << "\t\t\t" << aveStuMarks[i] << endl;
+	}
+
+	cout << "Subject\t\t" << "Lowest Marks\t\t" << "Highest Marks\t\t" << "Average Marks" << endl;
+	for (int j = 0; j < 5; j++)
+	{
+		cout << j + 1 << "\t\t\t" << lowestMarks[j] << "\t\t\t" << highestMarks[j] << "\t\t\t" << aveSubMarks[j] << endl;
+	}
+}
