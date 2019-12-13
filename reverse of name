@@ -1,21 +1,22 @@
 // C++ program to print reverse of name in a string. 
 #include<iostream> 
+#include <string>
 
 using namespace std;
 
-string wordReverse(string str)
+string wordReverse(string name)
 {
-	int i = str.length() - 1;
+	int i = name.length() - 1;
 	int start, end = i + 1;
 	string result = "";
 
 	while (i >= 0)
 	{
-		if (str[i] == ' ')
+		if (name[i] == ' ')
 		{
 			start = i + 1;
 			while (start != end)
-				result += str[start++];
+				result += name[start++];
 
 			result += ' ';
 
@@ -25,7 +26,7 @@ string wordReverse(string str)
 	}
 	start = 0;
 	while (start != end)
-		result += str[start++];
+		result += name[start++];
 
 	return result;
 }
@@ -33,9 +34,11 @@ string wordReverse(string str)
 // Driver code 
 int main()
 {
-	string str = "DING XUE WING";
+	string name;
+	cout << "Enter your name:" << endl;
+	getline(cin, name);
 
-	cout << wordReverse(str);
+	cout << wordReverse(name);
 
 	return 0;
 }
