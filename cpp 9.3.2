@@ -1,0 +1,64 @@
+// This program is keep track of the marks for 5 subjects taken by 20 students.
+
+#include <iostream>
+using namespace std;
+
+void readData(int studMarks[20][5]);
+void calTotMarks(int studMarks[], int &);
+void display(const int studMarks[][5], const int totMarks[]);
+
+int main()
+{
+	int studMarks[20][5], totMarks[20];
+	readData(studMarks);
+	for (int i = 0; i < 20; i++)
+	{
+		calTotMarks(studMarks[i], totMarks[i]);
+	}
+	display(studMarks, totMarks);
+
+}
+
+void readData(int studMarks[20][5])
+{
+	for (int i = 0; i < 20; i++);
+	{
+		cout << "Enter 5 subjects marks for student " << i+1 << ":" <<endl;
+
+		for (int j = 0; j < 5; j++)
+		{
+			cin >> studMarks[i][j];
+		}
+	}
+}
+
+void calTotMarks(int studMarks[], int totMarks[])
+{
+	for (int j = 0; j < 4; j++)
+	{
+		totMarks += studMarks[j];
+	}
+}
+
+void display(const int studMarks[][5], const int totMarks[])
+{
+	cout << " Student\t\t";
+
+	for (int j = 0; j < 5; j++)
+	{
+		cout << "Subject\t\t" << j + 1 << "\t";
+	}
+	cout << "Total Marks" << endl;
+
+	
+	for (int i = 0; i < 20; i++)
+	{
+		cout << i + 1 << "\t\t";
+		for (int j = 0; j < 5; j++)
+		{
+			cout << studMarks[i][j] << "\t\t";
+		}
+		cout << " " << totMarks[i];
+	}
+}
+
