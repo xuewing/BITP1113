@@ -1,0 +1,57 @@
+// cpp 12.3.1 calculator program
+
+#include <iostream>
+using namespace std;
+
+void getInput(int*, int*, char*);
+void calculate(int*, int*, char*);
+void displayResult(int, int, char, int);
+
+int main()
+{
+	int num1, num2, result;
+	char op;
+
+	cout << " \tMENU" << endl;
+	cout << " \t****" << endl;
+	cout << " +: Add"
+		<< "\n -: Subtract"
+		<< "\n *: Multiply"
+		<< "\n /: Divide"
+		<< "\n x:Exit" << endl;
+
+	do {
+		getInput(&num1, &num2, &op);
+		result = calculate(&num1, &num2, &op);
+		displayResult(num1, num2, op, result);
+	} while (true);
+}
+
+void getInput(int* x, int* y, char* op)
+{
+	cout << "Select an operator:" << endl;
+	cin >> *op;
+
+	if (*op == 'x')
+		exit(0);
+
+	cout << " Enter two numbers: " << endl;
+	cin >> *x >> *y;
+}
+
+void calculate(int* x, int* y, char* op)
+{
+	if (*op == '+')
+		cout << *x + *y << endl;
+	else if (*op == '-')
+		cout << *x - *y << endl;
+	else if (*op == '*')
+		cout << *x * *y << endl;
+	else if (*op == '/')
+		cout << *x / *y << endl;
+}
+
+void displayResult(int x, int y, char op, int result)
+{
+	cout << x << op << y << "=" << result << endl;
+}
