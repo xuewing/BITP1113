@@ -1,0 +1,47 @@
+// This program display distance between town1 and town2
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int distance[5][5] = { {258},{43,301},{475,217,518},{876,616,918,401},{623,365,667,148,246} };
+
+	int t1, t2;
+
+	cout << "-------------------------------" << endl;
+	cout << " Representative number to city" << endl;
+	cout << "-------------------------------" << endl;
+	cout << "Alor Setar\t" << "0"
+		<< "\nIpoh\t\t" << "1"
+		<< "\nKangar\t\t" << "2"
+		<< "\nKuala Lumpur\t" << "3"
+		<< "\nMersing\t\t" << "4"
+		<< "\nMelaka\t\t" << "5" << endl;
+
+
+	cout << "Town distance table (in km)" << endl;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << i + 1 << "\t";
+		for (int j = 0; j < 5; j++)
+		{
+			cout << distance[i][j] << "\t";
+		}
+		cout << i + 1 << "\t" << endl;
+	}
+
+	cout << "Choose town 1" << endl;
+	cin >> t1;
+	cout << "Choose town 2" << endl;
+	cin >> t2;
+
+	if (t2 < t1)
+	{
+		cout << "The distance between town1 and town2 is " << distance[t1 - 1][t2] << endl;
+	}
+	else
+	{
+		cout << "The distance between town1 and town2 is " << distance[t1][t2-1] << endl;
+	}
+}
